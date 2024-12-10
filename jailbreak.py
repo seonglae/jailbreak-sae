@@ -66,7 +66,7 @@ for layer in tqdm(target_layers, desc="Loading SAEs"):
     )
     saes.append(sae)
 
-# Collect feature activations
+# Collect feature activations (may require a lot of CPU memory)
 feature_activations = []
 for encoding in tqdm(tokens_list, desc=f"Collecting activations"):
     input_ids = encoding['input_ids']
